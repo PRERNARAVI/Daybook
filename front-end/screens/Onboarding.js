@@ -1,6 +1,7 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, StatusBar, Dimensions, Platform } from 'react-native';
+import { ImageBackground, StyleSheet, StatusBar, Dimensions, Platform, View } from 'react-native';
 import { Block, Button, Text, theme } from 'galio-framework';
+import HomePageWallPaper from '../assets/images/HomeScreenWallpaper.jpg';
 
 const { height, width } = Dimensions.get('screen');
 
@@ -14,23 +15,20 @@ export default class Onboarding extends React.Component {
     return (
       <Block flex style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <Block flex center>
+        <View style={styles.container} >
           <ImageBackground
-            source={{  uri: Images.Onboarding }}
-            style={{ height: height, width: width, marginTop: '-55%', zIndex: 1 }}
+            source={ HomePageWallPaper }
+            style={styles.image}
           />
-        </Block>
+        </View>
         <Block flex space="between" style={styles.padded}>
           <Block flex space="around" style={{ zIndex: 2 }}>
             <Block>
               <Block>
-                <Text color="white" size={60}>Material</Text>
+                <Text color="black" size={60}>Daybook</Text>
               </Block>
-              <Block row>
-                <Text color="white" size={60}>Kit</Text>
-              </Block>
-              <Text size={16} color='rgba(255,255,255,0.6)'>
-                Fully coded React Native components.
+              <Text size={16} color="black">
+                A Mental Health Journaling App!
               </Text>
             </Block>
             <Block center>
@@ -51,7 +49,9 @@ export default class Onboarding extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.COLORS.BLACK,
+    /**backgroundColor: theme.COLORS.BLACK,*/
+    flex: 2,
+    flexDirection: "column"
   },
   padded: {
     paddingHorizontal: theme.SIZES.BASE * 2,
@@ -63,5 +63,10 @@ const styles = StyleSheet.create({
     height: theme.SIZES.BASE * 3,
     shadowRadius: 0,
     shadowOpacity: 0,
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center" 
   },
 });
