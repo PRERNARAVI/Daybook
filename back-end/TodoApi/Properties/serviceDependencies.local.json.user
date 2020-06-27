@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2020-06-27T19:42:58.8899732Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-06-27T19:54:59.518396Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "HackathonApivaultResourceGroup"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "e5f0cbd5-b3da-448a-b030-af4cc6513f2a"
+    }
+  }
+}

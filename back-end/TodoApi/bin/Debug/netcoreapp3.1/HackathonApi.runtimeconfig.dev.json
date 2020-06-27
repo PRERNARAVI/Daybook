@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\t-ryfite\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\t-ryfite\\.nuget\\packages"
+    ]
+  }
+}
