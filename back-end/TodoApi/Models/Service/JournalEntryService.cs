@@ -1,5 +1,7 @@
 ﻿using HackathonApi.Models.Dto;
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
+using Microsoft.Azure.KeyVault;
+using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Rest.Azure;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,14 @@ namespace HackathonApi.Models.Service
 {
     public class JournalEntryService
     {
+        private readonly KeyVaultClient _keyVaultClient;
+        public JournalEntryService()
+        {
+            
+        }
         public async Task<JournalEntry> GetTextAnalytics()
         {
-            TextAnalyticsClient textClient = default;
+            
             return new JournalEntry();
         }
     }

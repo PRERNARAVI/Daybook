@@ -8,6 +8,17 @@
       "sslPort": 44301
     }
   },
+  "Secrets": {
+    "Keyvault": {
+      "BaseUrl": "https://hackathonapivault.vault.azure.net/",
+      "Prefix": "keyvault:",
+      "AuthenticationString": "RunAs=Developer; DeveloperTool=VisualStudio",
+      "RetryEnabled": true,
+      "RetryCount": 3,
+      "RetryIntervalInMiliSeconds": 500,
+      "IsExponential": true
+    }
+  },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",

@@ -13,12 +13,14 @@
       "BaseUrl": "https://hackathonapivault.vault.azure.net/",
       "Prefix": "keyvault:",
       "AuthenticationString": "RunAs=Developer; DeveloperTool=VisualStudio",
-      "ClientId": "4284a05c-8ef6-40ed-8498-bb7f29d8faec",
-      "ClientSecret": "E--1uICw4mt5j~SMC9q-Ku4VxgPzv-pbM8",
       "RetryEnabled": true,
       "RetryCount": 3,
       "RetryIntervalInMiliSeconds": 500,
       "IsExponential": true
+    },
+    "Database": {
+      "Name": "https://hackathonapivault.vault.azure.net/secrets/ConnectionStrings--hackathondatabase/05a7e86e6833435abdfad5095dec37c9"
+      
     }
   },
   "profiles": {

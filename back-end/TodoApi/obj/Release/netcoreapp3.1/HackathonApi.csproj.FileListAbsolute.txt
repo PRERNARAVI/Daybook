@@ -1,7 +1,6 @@
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\appsettings.Development.json
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\appsettings.json
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Properties\serviceDependencies.HackathonApi20200627131743 - Web Deploy.json
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Properties\serviceDependencies.json
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Properties\serviceDependencies.local.json
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\HackathonApi.exe
@@ -171,3 +170,4 @@ C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.1\HackathonApi.dll
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.1\HackathonApi.pdb
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.1\HackathonApi.genruntimeconfig.cache
+C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Properties\serviceDependencies.DaybookApi - Web Deploy.json

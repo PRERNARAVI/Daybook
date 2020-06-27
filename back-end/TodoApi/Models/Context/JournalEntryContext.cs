@@ -14,6 +14,6 @@ namespace HackathonApi.Models.Context
 
         }
 
-        public DbSet<JournalEntry> JournalEntries { get; set; }
+        public DbSet<JournalEntry> JournalEntry { get; set; }
     }
 }

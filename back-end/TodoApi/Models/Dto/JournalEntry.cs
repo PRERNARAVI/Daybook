@@ -10,11 +10,11 @@ namespace HackathonApi.Models.Dto
     public class JournalEntry
     {
         [Key]
-        public long JournalKey { get; set; }
+        public int JournalKey { get; set; }
         public string Prompt { get; set; }
         public string Header { get; set; }
-        public string Content { get; set; }
-        public DateTime TimeStamp { get; set; }
+        public string Contents { get; set; }
+        public DateTime TimeStamped { get; set; }
         public Mood Feeling { get; set; }
 
     }
