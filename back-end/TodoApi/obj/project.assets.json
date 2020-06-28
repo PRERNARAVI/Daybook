@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Azure.AI.TextAnalytics/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.2.2",
+          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "System.Text.Json": "4.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.AI.TextAnalytics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.AI.TextAnalytics.dll": {}
+        }
+      },
       "Azure.Core/1.2.2": {
         "type": "package",
         "dependencies": {
@@ -3578,6 +3592,22 @@
     }
   },
   "libraries": {
+    "Azure.AI.TextAnalytics/1.0.1": {
+      "sha512": "IS0rOfMuWIUQ4/It2t6npnloFgSB0QzQWM2y8L8kGuwqdCMkG+eHeXPItwZVon74wTzcQvA+yapio4fnS0FVYA==",
+      "type": "package",
+      "path": "azure.ai.textanalytics/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.ai.textanalytics.1.0.1.nupkg.sha512",
+        "azure.ai.textanalytics.nuspec",
+        "lib/netstandard2.0/Azure.AI.TextAnalytics.dll",
+        "lib/netstandard2.0/Azure.AI.TextAnalytics.xml",
+        "pkgicon.png"
+      ]
+    },
     "Azure.Core/1.2.2": {
       "sha512": "KVnvNS0XLCrrOP5Ei1hsCQ2BBseO5ScVG2kk8exsH5cWHk7Tkv9VXfxHJ1v0WA6I9I+bcBwtgYV7LGF/H8W5Ng==",
       "type": "package",
@@ -10697,6 +10727,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Azure.AI.TextAnalytics >= 1.0.1",
       "Azure.Core >= 1.2.2",
       "Microsoft.AspNetCore.AzureKeyVault.HostingStartup >= 2.0.4",
       "Microsoft.Azure.CognitiveServices.Language.TextAnalytics >= 4.0.0",
@@ -10712,29 +10743,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\t-ryfite\\.nuget\\packages\\": {}
+    "/Users/g/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\HackathonApi.csproj",
+      "projectUniqueName": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/HackathonApi.csproj",
       "projectName": "HackathonApi",
-      "projectPath": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\HackathonApi.csproj",
-      "packagesPath": "C:\\Users\\t-ryfite\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\obj\\",
+      "projectPath": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/HackathonApi.csproj",
+      "packagesPath": "/Users/g/.nuget/packages/",
+      "outputPath": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\t-ryfite\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/g/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://microsoftit.pkgs.visualstudio.com/_packaging/MicrosoftIT/nuget/v3/index.json": {},
-        "https://microsoftit.pkgs.visualstudio.com/_packaging/PS.GRM/nuget/v3/index.json": {}
+        "https://office.pkgs.visualstudio.com/_packaging/Office/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -10750,6 +10778,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Azure.AI.TextAnalytics": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Azure.Core": {
             "target": "Package",
             "version": "[1.2.2, )"
@@ -10819,7 +10851,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
       }
     }
   }

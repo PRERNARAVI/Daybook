@@ -1,30 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\HackathonApi.csproj": {}
+    "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/HackathonApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\HackathonApi.csproj": {
+    "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/HackathonApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\HackathonApi.csproj",
+        "projectUniqueName": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/HackathonApi.csproj",
         "projectName": "HackathonApi",
-        "projectPath": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\HackathonApi.csproj",
-        "packagesPath": "C:\\Users\\t-ryfite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\obj\\",
+        "projectPath": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/HackathonApi.csproj",
+        "packagesPath": "/Users/g/.nuget/packages/",
+        "outputPath": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\t-ryfite\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/g/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://microsoftit.pkgs.visualstudio.com/_packaging/MicrosoftIT/nuget/v3/index.json": {},
-          "https://microsoftit.pkgs.visualstudio.com/_packaging/PS.GRM/nuget/v3/index.json": {}
+          "https://office.pkgs.visualstudio.com/_packaging/Office/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -40,6 +37,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Azure.AI.TextAnalytics": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Azure.Core": {
               "target": "Package",
               "version": "[1.2.2, )"
@@ -109,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
         }
       }
     }
