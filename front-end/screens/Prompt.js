@@ -39,18 +39,24 @@ class Prompt extends React.Component {
 
     return (
         <ScrollView
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={styles.products}>
-            <View style={styles.prompt} onPress={() => navigation.navigate('Entry')}>
-            <Text style={styles.textEntry} onPress={() => navigation.navigate('Entry')}>What are you feeling upset about today? Why do you think you are feeling this way?</Text>
-            </View>
-            <View style={styles.prompt}>
-            <Text style={styles.textEntry}>Prompt 2</Text>
-            </View>
-            <View style={styles.prompt}>
-            <Text style={styles.textEntry}>Prompt 3</Text>
-            </View>
-      </ScrollView>
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.products}>
+        <View style={styles.prompt} onPress={() => navigation.navigate('Entry')}>
+        <Text style={styles.textEntry} onPress={() => navigation.navigate('Entry')}>
+            How do you want to maintain your connections to people in your life and things that add joyfulness during the pandemic? 
+        </Text>
+        </View>
+        <View style={styles.prompt}>
+        <Text style={styles.textEntry}>
+            Write a letter to your body. What would you say to it as it experiences fear, uncertainty, and anxiety? 
+        </Text>
+        </View>
+        <View style={styles.prompt}>
+        <Text style={styles.textEntry}>
+            Write about a difficult time in your life you overcame. 
+        </Text>
+        </View>
+  </ScrollView>
       
     );
   }
@@ -97,8 +103,8 @@ const styles = StyleSheet.create({
     height: 200,
     backgroundColor: '#bfcfff',
     borderRadius: 10,
-    padding: 35,
-    margin: 30
+    padding: 30,
+    margin: 25
   },
     textEntry: {
         fontSize: 20,

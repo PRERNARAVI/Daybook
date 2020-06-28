@@ -14,6 +14,7 @@ import SettingsScreen from '../screens/Settings';
 import Questions from '../screens/Questions';
 import Prompt from '../screens/Prompt';
 import JournalEntry from '../screens/JournalEntry';
+import PastEntries from '../screens/PastEntries';
 
 import CustomDrawerContent from './Menu';
 import { Icon, Header } from '../components';
@@ -133,6 +134,27 @@ function QuestionsStack(props) {
     </Stack.Navigator>
   );
 }
+function PastEntriesStack(props) {
+  return (
+    <Stack.Navigator mode="card" headerMode="screen">
+      <Stack.Screen 
+        name="PastEntries"
+        component={PastEntries}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header 
+              search
+              tabs
+              title="Past Entries"
+              navigation={navigation}
+              scene={scene}
+            />
+          )
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
 function PromptStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="screen">
@@ -239,6 +261,20 @@ function AppStack(props) {
       <Drawer.Screen
         name="Prompt"
         component={PromptStack}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="shop"
+              family="GalioExtra"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="PastEntries"
+        component={PastEntriesStack}
         options={{
           drawerIcon: ({ focused }) => (
             <Icon

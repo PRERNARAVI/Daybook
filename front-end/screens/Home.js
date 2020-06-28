@@ -33,7 +33,8 @@ export default class Home extends React.Component {
         <Block flex>
           <Product product={products[0]} horizontal 
           onPress={() => navigation.navigate('Questions')}/>
-          <Product product={products[1]} horizontal />
+          <Product product={products[1]} horizontal 
+          onPress={() => navigation.navigate('PastEntries')}/>
         </Block>
       </ScrollView>
       </View>

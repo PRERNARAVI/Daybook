@@ -19,7 +19,7 @@ class Product extends React.Component {
             <Image source={{ uri: product.image }} style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Questions')}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('PastEntries')}>
           <Block flex space="between" style={styles.productDescription}>
             <Text size={14} style={styles.productTitle}>{product.title}</Text>
           </Block>
