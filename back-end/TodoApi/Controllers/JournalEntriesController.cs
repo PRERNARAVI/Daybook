@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using HackathonApi.Models.Context;
 using HackathonApi.Models.Dto;
 using HackathonApi.Models.Service;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Azure.KeyVault;
 
 namespace HackathonApi.Controllers
 {
@@ -15,27 +17,59 @@ namespace HackathonApi.Controllers
     [ApiController]
     public class JournalEntriesController : ControllerBase
     {
-        private readonly JournalEntryContext _context;
+        private readonly JournalEntryContext _contextJE;
+        private readonly GoalContext _contextGoal;
+        private readonly UserDataContext _contextUser;
+        private readonly PromptContext _contextPrompt;
         private readonly JournalEntryService _journalEntryService;
 
-        public JournalEntriesController(JournalEntryContext context)
+        public JournalEntriesController(JournalEntryContext contextJE, GoalContext contextGoal, PromptContext contextPrompt, UserDataContext contextUser,IConfiguration configuration, KeyVaultClient keyVaultClient)
         {
-             _journalEntryService = new JournalEntryService();
-            _context = context;
+             _journalEntryService = new JournalEntryService(configuration,keyVaultClient);
+            _contextJE = contextJE;
+            _contextGoal = contextGoal;
+            _contextUser = contextUser;
+            _contextPrompt = contextPrompt;
         }
 
         // GET: api/JournalEntries
         [HttpGet]
         public async Task<ActionResult<IEnumerable<JournalEntry>>> GetJournalEntries()
         {
-            return await _context.JournalEntry.ToListAsync();
+            return await _contextJE.JournalEntry.ToListAsync();
+        }
+
+        [HttpGet("goals/{id}/{mood}")]
+        public async Task<IEnumerable<string>> GetBestGoals(int id, int mood)
+        {
+            IEnumerable<Goal> goals = await _contextGoal.Goal.ToListAsync();
+            var userData = await _contextUser.UserData.FindAsync(id);
+
+            if (userData == null)
+            {
+                throw new Exception();
+            }
+            return await _journalEntryService.GetBestGoals(goals, userData, mood);
+        }
+
+        [HttpGet("prompts/{id}/{mood}")]
+        public async Task<IEnumerable<string>> GetBestPrompts(int id, int mood)
+        {
+            IEnumerable<Prompt> prompts = await _contextPrompt.Prompt.ToListAsync();
+            var userData = await _contextUser.UserData.FindAsync(id);
+
+            if (userData == null)
+            {
+                throw new Exception();
+            }
+            return await _journalEntryService.GetBestPrompts(prompts, userData, mood);
         }
 
         // GET: api/JournalEntries/5
         [HttpGet("{id}")]
         public async Task<ActionResult<JournalEntry>> GetJournalEntry(int id)
         {
-            var journalEntry = await _context.JournalEntry.FindAsync(id);
+            var journalEntry = await _contextJE.JournalEntry.FindAsync(id);
 
             if (journalEntry == null)
             {
@@ -56,11 +90,11 @@ namespace HackathonApi.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(journalEntry).State = EntityState.Modified;
+            _contextJE.Entry(journalEntry).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _contextJE.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -83,14 +117,10 @@ namespace HackathonApi.Controllers
         [HttpPost]
         public async Task<ActionResult<JournalEntry>> PostJournalEntry(UserEntry userEntry)
         {
-
-<<<<<<< HEAD
             JournalEntry journalEntry = await _journalEntryService.GetTextAnalytics(userEntry);
-=======
-            JournalEntry journalEntry = _journalEntryService.GetTextAnalytics();
->>>>>>> e7fc36c... sentiment analysis added
-            _context.JournalEntry.Add(journalEntry);
-            await _context.SaveChangesAsync();
+
+            _contextJE.JournalEntry.Add(journalEntry);
+            await _contextJE.SaveChangesAsync();
 
             return CreatedAtAction("GetJournalEntry", new { id = journalEntry.JournalKey }, journalEntry);
         }
@@ -99,21 +129,21 @@ namespace HackathonApi.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<JournalEntry>> DeleteJournalEntry(int id)
         {
-            var journalEntry = await _context.JournalEntry.FindAsync(id);
+            var journalEntry = await _contextJE.JournalEntry.FindAsync(id);
             if (journalEntry == null)
             {
                 return NotFound();
             }
 
-            _context.JournalEntry.Remove(journalEntry);
-            await _context.SaveChangesAsync();
+            _contextJE.JournalEntry.Remove(journalEntry);
+            await _contextJE.SaveChangesAsync();
 
             return journalEntry;
         }
 
         private bool JournalEntryExists(int id)
         {
-            return _context.JournalEntry.Any(e => e.JournalKey == id);
+            return _contextJE.JournalEntry.Any(e => e.JournalKey == id);
         }
     }
 }

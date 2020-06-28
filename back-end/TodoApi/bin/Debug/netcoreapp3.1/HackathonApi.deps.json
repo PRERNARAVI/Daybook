@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "HackathonApi/1.0.0": {
         "dependencies": {
+          "Azure.AI.TextAnalytics": "1.0.1",
           "Azure.Core": "1.2.2",
           "Microsoft.AspNetCore.AzureKeyVault.HostingStartup": "2.0.4",
           "Microsoft.Azure.CognitiveServices.Language.TextAnalytics": "4.0.0",
@@ -310,6 +311,22 @@
         },
         "compile": {
           "HackathonApi.dll": {}
+        }
+      },
+      "Azure.AI.TextAnalytics/1.0.1": {
+        "dependencies": {
+          "Azure.Core": "1.2.2",
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.AI.TextAnalytics.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.120.32302"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.AI.TextAnalytics.dll": {}
         }
       },
       "Azure.Core/1.2.2": {
@@ -4580,6 +4597,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Azure.AI.TextAnalytics/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IS0rOfMuWIUQ4/It2t6npnloFgSB0QzQWM2y8L8kGuwqdCMkG+eHeXPItwZVon74wTzcQvA+yapio4fnS0FVYA==",
+      "path": "azure.ai.textanalytics/1.0.1",
+      "hashPath": "azure.ai.textanalytics.1.0.1.nupkg.sha512"
     },
     "Azure.Core/1.2.2": {
       "type": "package",
