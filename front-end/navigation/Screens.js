@@ -12,6 +12,7 @@ import ProfileScreen from '../screens/Profile';
 import ProScreen from '../screens/Pro';
 import SettingsScreen from '../screens/Settings';
 import Questions from '../screens/Questions';
+import Prompt from '../screens/Prompt';
 
 import CustomDrawerContent from './Menu';
 import { Icon, Header } from '../components';
@@ -131,6 +132,27 @@ function QuestionsStack(props) {
     </Stack.Navigator>
   );
 }
+function PromptStack(props) {
+  return (
+    <Stack.Navigator mode="card" headerMode="screen">
+      <Stack.Screen 
+        name="Prompt"
+        component={Prompt}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header 
+              search
+              tabs
+              title="Prompt"
+              navigation={navigation}
+              scene={scene}
+            />
+          )
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
 
 function AppStack(props) {
   return (
@@ -181,6 +203,20 @@ function AppStack(props) {
       <Drawer.Screen
         name="Questions"
         component={Questions}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="shop"
+              family="GalioExtra"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="Prompt"
+        component={Prompt}
         options={{
           drawerIcon: ({ focused }) => (
             <Icon

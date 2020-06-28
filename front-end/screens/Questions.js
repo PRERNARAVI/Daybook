@@ -50,11 +50,11 @@ const survey = [
     
     {
         questionType: 'Info',
-        questionText: 'That is all for the demo, tap finish to see your results!'
+        questionText: 'Hit Finished to submit your responses!'
     },
 ];
 
-export default class SurveyScreen extends Component {
+export default class Questions extends Component {
     static navigationOptions = () => {
         return {
             headerStyle: {
@@ -108,7 +108,7 @@ export default class SurveyScreen extends Component {
         const answersAsObj = {};
         for (const elem of infoQuestionsRemoved) { answersAsObj[elem.questionId] = elem.value; }
 
-        this.props.navigation.navigate('SurveyCompleted', { surveyAnswers: answersAsObj });
+        //this.props.navigation.navigate('SurveyCompleted', { surveyAnswers: answersAsObj });
     }
 
     /**
@@ -163,7 +163,7 @@ export default class SurveyScreen extends Component {
             <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
                 <Button
                     title={'Finished'}
-                    onPress={onPress}
+                    onPress={() => this.props.navigation.navigate('Prompt')}
                     disabled={!enabled}
                     color={GREEN}
                 />
