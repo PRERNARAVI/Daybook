@@ -14,15 +14,15 @@ class Product extends React.Component {
 
     return (
       <Block row={horizontal} card flex style={[styles.product, styles.shadow, style]}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro', { product: product })}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('Questions')}>
           <Block flex style={[styles.imageContainer, styles.shadow]}>
             <Image source={{ uri: product.image }} style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro', { product: product })}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('Questions')}>
           <Block flex space="between" style={styles.productDescription}>
             <Text size={14} style={styles.productTitle}>{product.title}</Text>
-            <Text size={12} muted={!priceColor} color={priceColor}>${product.price}</Text>
+            
           </Block>
         </TouchableWithoutFeedback>
       </Block>
@@ -34,15 +34,24 @@ export default withNavigation(Product);
 
 const styles = StyleSheet.create({
   product: {
-    backgroundColor: theme.COLORS.WHITE,
+    backgroundColor: "#bfcfff",
     marginVertical: theme.SIZES.BASE,
     borderWidth: 0,
-    minHeight: 114,
+    minHeight: 200,
   },
   productTitle: {
+    color: "#001f7d",
     flex: 1,
     flexWrap: 'wrap',
     paddingBottom: 6,
+    fontSize: 30,
+    marginTop: 40,
+    fontFamily: "Avenir Next",
+    fontWeight: "600",
+    alignContent: "center",
+    textAlign: "center",
+    marginRight: 25,
+
   },
   productDescription: {
     padding: theme.SIZES.BASE / 2,
@@ -52,8 +61,9 @@ const styles = StyleSheet.create({
   },
   image: {
     borderRadius: 3,
-    marginHorizontal: theme.SIZES.BASE / 2,
-    marginTop: -16,
+    marginHorizontal: theme.SIZES.BASE,
+    marginTop: 35,
+
   },
   horizontalImage: {
     height: 122,

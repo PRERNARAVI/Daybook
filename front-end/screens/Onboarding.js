@@ -1,6 +1,7 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, StatusBar, Dimensions, Platform } from 'react-native';
+import { ImageBackground, StyleSheet, StatusBar, Dimensions, Platform, View } from 'react-native';
 import { Block, Button, Text, theme } from 'galio-framework';
+import HomePageWallPaper from '../assets/images/HomeScreenWallpaper.jpg';
 
 const { height, width } = Dimensions.get('screen');
 
@@ -14,36 +15,34 @@ export default class Onboarding extends React.Component {
     return (
       <Block flex style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <Block flex center>
+        <View style={styles.container} >
           <ImageBackground
-            source={{  uri: Images.Onboarding }}
-            style={{ height: height, width: width, marginTop: '-55%', zIndex: 1 }}
-          />
-        </Block>
-        <Block flex space="between" style={styles.padded}>
+            source={ HomePageWallPaper }
+            style={styles.image}
+          >
+          <Block flex space="between" style={styles.padded}>
           <Block flex space="around" style={{ zIndex: 2 }}>
             <Block>
               <Block>
-                <Text color="white" size={60}>Material</Text>
+                <Text color="white" size={70} style={styles.textPosition}>Daybook</Text>
               </Block>
-              <Block row>
-                <Text color="white" size={60}>Kit</Text>
-              </Block>
-              <Text size={16} color='rgba(255,255,255,0.6)'>
-                Fully coded React Native components.
+              <Text size={20} color="white">
+                A Mental Health Journaling App!
               </Text>
             </Block>
             <Block center>
               <Button
                 shadowless
                 style={styles.button}
-                color={materialTheme.COLORS.BUTTON_COLOR}
+                color="#001f7d"
                 onPress={() => navigation.navigate('App')}>
                 GET STARTED
               </Button>
             </Block>
           </Block>
         </Block>
+        </ImageBackground>
+        </View>
       </Block>
     );
   }
@@ -51,10 +50,17 @@ export default class Onboarding extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.COLORS.BLACK,
+    /**backgroundColor: theme.COLORS.BLACK,*/
+    flex: 1,
+    
+  },
+  textPosition: {
+    justifyContent: 'flex-start',
+    paddingTop: theme.SIZES.BASE * 3, 
   },
   padded: {
     paddingHorizontal: theme.SIZES.BASE * 2,
+    paddingTop: theme.SIZES.BASE * 4,
     position: 'relative',
     bottom: theme.SIZES.BASE,
   },
@@ -63,5 +69,11 @@ const styles = StyleSheet.create({
     height: theme.SIZES.BASE * 3,
     shadowRadius: 0,
     shadowOpacity: 0,
+    borderRadius: 5
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center" 
   },
 });

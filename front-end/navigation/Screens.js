@@ -11,6 +11,9 @@ import OnboardingScreen from '../screens/Onboarding';
 import ProfileScreen from '../screens/Profile';
 import ProScreen from '../screens/Pro';
 import SettingsScreen from '../screens/Settings';
+import Questions from '../screens/Questions';
+import Prompt from '../screens/Prompt';
+import JournalEntry from '../screens/JournalEntry';
 
 import CustomDrawerContent from './Menu';
 import { Icon, Header } from '../components';
@@ -106,14 +109,67 @@ function HomeStack(props) {
           )
         }}
       />
+    </Stack.Navigator>
+  );
+}
+function QuestionsStack(props) {
+  return (
+    <Stack.Navigator mode="card" headerMode="screen">
       <Stack.Screen 
-        name="Pro"
-        component={ProScreen}
+        name="Questions"
+        component={Questions}
         options={{
           header: ({ navigation, scene }) => (
-            <Header back white transparent title="" navigation={navigation} scene={scene} />
-          ),
-          headerTransparent: true
+            <Header 
+              search
+              tabs
+              title="Questions"
+              navigation={navigation}
+              scene={scene}
+            />
+          )
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+function PromptStack(props) {
+  return (
+    <Stack.Navigator mode="card" headerMode="screen">
+      <Stack.Screen 
+        name="Prompt"
+        component={Prompt}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header 
+              search
+              tabs
+              title="Prompt"
+              navigation={navigation}
+              scene={scene}
+            />
+          )
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+function EntryStack(props) {
+  return (
+    <Stack.Navigator mode="card" headerMode="screen">
+      <Stack.Screen 
+        name="Entry"
+        component={JournalEntry}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header 
+              search
+              tabs
+              title="Entry"
+              navigation={navigation}
+              scene={scene}
+            />
+          )
         }}
       />
     </Stack.Navigator>
@@ -167,42 +223,13 @@ function AppStack(props) {
         }}
       />
       <Drawer.Screen
-        name="Woman"
-        component={ProScreen}
+        name="Questions"
+        component={QuestionsStack}
         options={{
           drawerIcon: ({ focused }) => (
             <Icon
               size={16}
-              name="md-woman"
-              family="ionicon"
-              color={focused ? "white" : materialTheme.COLORS.MUTED}
-              style={{ marginLeft: 4, marginRight: 4 }}
-            />
-          )
-        }}
-      />
-      <Drawer.Screen
-        name="Man"
-        component={ProScreen}
-        options={{
-          drawerIcon: ({ focused }) => (
-            <Icon
-              size={16}
-              name="man"
-              family="entypo"
-              color={focused ? "white" : materialTheme.COLORS.MUTED}
-            />
-          )
-        }}
-      />
-      <Drawer.Screen
-        name="Kids"
-        component={ProScreen}
-        options={{
-          drawerIcon: ({ focused }) => (
-            <Icon
-              size={16}
-              name="baby"
+              name="shop"
               family="GalioExtra"
               color={focused ? "white" : materialTheme.COLORS.MUTED}
             />
@@ -210,19 +237,37 @@ function AppStack(props) {
         }}
       />
       <Drawer.Screen
-        name="New Collection"
-        component={ProScreen}
+        name="Prompt"
+        component={PromptStack}
         options={{
           drawerIcon: ({ focused }) => (
             <Icon
               size={16}
-              name="grid-on"
-              family="material"
+              name="shop"
+              family="GalioExtra"
               color={focused ? "white" : materialTheme.COLORS.MUTED}
             />
           )
         }}
       />
+      <Drawer.Screen
+        name="Entry"
+        component={EntryStack}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="shop"
+              family="GalioExtra"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+            />
+          )
+        }}
+      />
+      
+      
+      
+      
       <Drawer.Screen
         name="Profile"
         component={ProfileStack}
