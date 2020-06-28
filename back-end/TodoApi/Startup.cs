@@ -34,10 +34,16 @@ namespace HackathonApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var res =  Configuration.GetSection("Secrets:Database:Name").Get<string[]>();
             services.AddDbContext<JournalEntryContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<UserDataContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<GoalDataContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<GoalContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<FeelingContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<PromptContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<ProblemContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
             services.AddControllers();
-
+            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddSingleton<KeyVaultClient>(_keyVaultClient);
             services.AddSwaggerDocument();
         }
 

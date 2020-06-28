@@ -24,9 +24,12 @@
     ".NETCoreApp,Version=v3.1": {
       "HackathonApi/1.0.0": {
         "dependencies": {
+          "Azure.Core": "1.2.2",
           "Microsoft.AspNetCore.AzureKeyVault.HostingStartup": "2.0.4",
           "Microsoft.Azure.CognitiveServices.Language.TextAnalytics": "4.0.0",
           "Microsoft.Azure.CognitiveServices.Personalizer": "0.8.0-preview",
+          "Microsoft.Azure.KeyVault": "3.0.5",
+          "Microsoft.Azure.Services.AppAuthentication": "1.5.0",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.5",
@@ -182,7 +185,7 @@
           "System": "4.0.0.0",
           "System.Drawing": "4.0.0.0",
           "System.Drawing.Primitives": "4.2.1.0",
-          "System.Dynamic.Runtime": "4.1.2.0",
+          "System.Dynamic.Runtime.Reference": "4.1.2.0",
           "System.Globalization.Calendars.Reference": "4.1.2.0",
           "System.Globalization.Reference": "4.1.2.0",
           "System.Globalization.Extensions.Reference": "4.1.2.0",
@@ -223,7 +226,7 @@
           "System.Net.WebSockets.Client": "4.1.2.0",
           "System.Net.WebSockets": "4.1.2.0",
           "System.Numerics": "4.0.0.0",
-          "System.Numerics.Vectors": "4.1.6.0",
+          "System.Numerics.Vectors.Reference": "4.1.6.0",
           "System.ObjectModel.Reference": "4.1.2.0",
           "System.Reflection.DispatchProxy": "4.0.6.0",
           "System.Reflection.Reference": "4.2.2.0",
@@ -309,6 +312,25 @@
           "HackathonApi.dll": {}
         }
       },
+      "Azure.Core/1.2.2": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "System.Buffers": "4.5.0",
+          "System.Diagnostics.DiagnosticSource": "4.7.1",
+          "System.Memory": "4.5.3",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Core.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.200.220.30402"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Core.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/1.0.2": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "3.1.5",
@@ -319,7 +341,7 @@
       "Microsoft.AspNetCore.AzureKeyVault.HostingStartup/2.0.4": {
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.3",
-          "Microsoft.Azure.Services.AppAuthentication": "1.0.1",
+          "Microsoft.Azure.Services.AppAuthentication": "1.5.0",
           "Microsoft.Extensions.Configuration.AzureKeyVault": "2.0.2",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.2"
         },
@@ -362,7 +384,7 @@
           "Microsoft.Extensions.ObjectPool": "1.0.1",
           "Microsoft.Extensions.Options": "3.1.5",
           "Microsoft.Net.Http.Headers": "1.0.2",
-          "System.Buffers": "4.3.0",
+          "System.Buffers": "4.5.0",
           "System.Threading": "4.3.0"
         }
       },
@@ -377,7 +399,7 @@
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.3",
           "Microsoft.Extensions.FileProviders.Abstractions": "2.0.1",
           "Microsoft.Net.Http.Headers": "1.0.2",
-          "System.Buffers": "4.3.0",
+          "System.Buffers": "4.5.0",
           "System.IO.FileSystem": "4.3.0"
         }
       },
@@ -437,7 +459,7 @@
           "Microsoft.Extensions.FileProviders.Abstractions": "2.0.1",
           "Microsoft.Extensions.Logging.Abstractions": "3.1.5",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0",
-          "System.Buffers": "4.3.0",
+          "System.Buffers": "4.5.0",
           "System.Diagnostics.DiagnosticSource": "4.7.1",
           "System.Text.Encoding": "4.3.0"
         }
@@ -501,7 +523,7 @@
       "Microsoft.AspNetCore.WebUtilities/1.0.2": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.1.5",
-          "System.Buffers": "4.3.0",
+          "System.Buffers": "4.5.0",
           "System.Collections": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
@@ -542,60 +564,60 @@
           "lib/netstandard2.0/Microsoft.Azure.CognitiveServices.Personalizer.dll": {}
         }
       },
-      "Microsoft.Azure.KeyVault/2.3.2": {
+      "Microsoft.Azure.KeyVault/3.0.5": {
         "dependencies": {
-          "Microsoft.Azure.KeyVault.WebKey": "2.0.7",
+          "Microsoft.Azure.KeyVault.WebKey": "3.0.5",
           "Microsoft.Rest.ClientRuntime": "2.3.20",
           "Microsoft.Rest.ClientRuntime.Azure": "3.3.19",
-          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "11.0.2",
           "System.Net.Http": "4.3.4"
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Azure.KeyVault.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.3.2.0"
+          "lib/netstandard2.0/Microsoft.Azure.KeyVault.dll": {
+            "assemblyVersion": "3.0.5.0",
+            "fileVersion": "3.0.520.10303"
           }
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Azure.KeyVault.dll": {}
+          "lib/netstandard2.0/Microsoft.Azure.KeyVault.dll": {}
         }
       },
-      "Microsoft.Azure.KeyVault.WebKey/2.0.7": {
+      "Microsoft.Azure.KeyVault.WebKey/3.0.5": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.1.2",
-          "NETStandard.Library": "1.6.1",
+          "Microsoft.Rest.ClientRuntime": "2.3.20",
+          "Microsoft.Rest.ClientRuntime.Azure": "3.3.19",
           "Newtonsoft.Json": "11.0.2",
           "System.Collections": "4.3.0",
           "System.Collections.Concurrent": "4.3.0",
           "System.Linq": "4.3.0",
+          "System.Net.Http": "4.3.4",
           "System.Runtime": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0"
+          "System.Security.Cryptography.Algorithms": "4.3.0",
+          "System.Security.Cryptography.Cng": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Azure.KeyVault.WebKey.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.7.0"
+          "lib/netstandard2.0/Microsoft.Azure.KeyVault.WebKey.dll": {
+            "assemblyVersion": "3.0.5.0",
+            "fileVersion": "3.0.520.10303"
           }
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Azure.KeyVault.WebKey.dll": {}
+          "lib/netstandard2.0/Microsoft.Azure.KeyVault.WebKey.dll": {}
         }
       },
-      "Microsoft.Azure.Services.AppAuthentication/1.0.1": {
+      "Microsoft.Azure.Services.AppAuthentication/1.5.0": {
         "dependencies": {
-          "Microsoft.IdentityModel.Clients.ActiveDirectory": "3.14.2",
-          "NETStandard.Library": "1.6.1",
+          "Microsoft.IdentityModel.Clients.ActiveDirectory": "5.2.0",
           "System.Diagnostics.Process": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Azure.Services.AppAuthentication.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.1.0"
+          "lib/netstandard2.0/Microsoft.Azure.Services.AppAuthentication.dll": {
+            "assemblyVersion": "1.5.0.0",
+            "fileVersion": "1.5.0.0"
           }
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Azure.Services.AppAuthentication.dll": {}
+          "lib/netstandard2.0/Microsoft.Azure.Services.AppAuthentication.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1100,10 +1122,10 @@
       },
       "Microsoft.Extensions.Configuration.AzureKeyVault/2.0.2": {
         "dependencies": {
-          "Microsoft.Azure.KeyVault": "2.3.2",
+          "Microsoft.Azure.KeyVault": "3.0.5",
           "Microsoft.Extensions.Configuration": "3.1.5",
           "Microsoft.Extensions.Configuration.FileExtensions": "2.0.2",
-          "Microsoft.IdentityModel.Clients.ActiveDirectory": "3.14.2"
+          "Microsoft.IdentityModel.Clients.ActiveDirectory": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.AzureKeyVault.dll": {
@@ -1304,30 +1326,34 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Clients.ActiveDirectory/3.14.2": {
+      "Microsoft.IdentityModel.Clients.ActiveDirectory/5.2.0": {
         "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
           "NETStandard.Library": "1.6.1",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Net.Http": "4.3.4",
+          "System.Runtime.Serialization.Formatters": "4.3.0",
           "System.Runtime.Serialization.Json": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0"
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Security.Cryptography.X509Certificates": "4.3.0",
+          "System.Security.SecureString": "4.3.0",
+          "System.Xml.XDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll": {
-            "assemblyVersion": "3.14.2.11",
-            "fileVersion": "3.14.40721.918"
-          },
           "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.dll": {
-            "assemblyVersion": "3.14.2.11",
-            "fileVersion": "3.14.40721.918"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll": {},
           "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.dll": {}
         }
       },
       "Microsoft.Net.Http.Headers/1.0.2": {
         "dependencies": {
-          "System.Buffers": "4.3.0",
+          "System.Buffers": "4.5.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Contracts": "4.0.1",
           "System.Globalization": "4.3.0",
@@ -1889,15 +1915,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Buffers/4.3.0": {
-        "dependencies": {
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Diagnostics.Tracing": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading": "4.3.0"
-        }
-      },
+      "System.Buffers/4.5.0": {},
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -2193,6 +2211,24 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Dynamic.Runtime/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
       "System.Globalization/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -2230,7 +2266,7 @@
       "System.IO.Compression/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "System.Buffers": "4.3.0",
+          "System.Buffers": "4.5.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.IO": "4.3.0",
@@ -2248,7 +2284,7 @@
       },
       "System.IO.Compression.ZipFile/4.3.0": {
         "dependencies": {
-          "System.Buffers": "4.3.0",
+          "System.Buffers": "4.5.0",
           "System.IO": "4.3.0",
           "System.IO.Compression": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
@@ -2373,6 +2409,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Numerics.Vectors/4.5.0": {},
       "System.ObjectModel/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -3816,7 +3853,7 @@
         },
         "compileOnly": true
       },
-      "System.Dynamic.Runtime/4.1.2.0": {
+      "System.Dynamic.Runtime.Reference/4.1.2.0": {
         "compile": {
           "System.Dynamic.Runtime.dll": {}
         },
@@ -4062,7 +4099,7 @@
         },
         "compileOnly": true
       },
-      "System.Numerics.Vectors/4.1.6.0": {
+      "System.Numerics.Vectors.Reference/4.1.6.0": {
         "compile": {
           "System.Numerics.Vectors.dll": {}
         },
@@ -4538,6 +4575,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Azure.Core/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KVnvNS0XLCrrOP5Ei1hsCQ2BBseO5ScVG2kk8exsH5cWHk7Tkv9VXfxHJ1v0WA6I9I+bcBwtgYV7LGF/H8W5Ng==",
+      "path": "azure.core/1.2.2",
+      "hashPath": "azure.core.1.2.2.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Authorization/1.0.2": {
       "type": "package",
       "serviceable": true,
@@ -4699,26 +4743,26 @@
       "path": "microsoft.azure.cognitiveservices.personalizer/0.8.0-preview",
       "hashPath": "microsoft.azure.cognitiveservices.personalizer.0.8.0-preview.nupkg.sha512"
     },
-    "Microsoft.Azure.KeyVault/2.3.2": {
+    "Microsoft.Azure.KeyVault/3.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-A82ESUdfLz2wMhYuPxrwf/fA7JVt3IARgeMCG3TsaLtxUxa9RBKX3f0zdnKmvBvJ/u1/5g03OLR26GPekqY5HQ==",
-      "path": "microsoft.azure.keyvault/2.3.2",
-      "hashPath": "microsoft.azure.keyvault.2.3.2.nupkg.sha512"
+      "sha512": "sha512-hbWw44JCJhk7e+CFeqSD1iQ2k4MP6bVVahEd9Cd1OP6JNyy0Y/S+9almtadH3vUoeDQsBAoQmzGImNoK3gxpog==",
+      "path": "microsoft.azure.keyvault/3.0.5",
+      "hashPath": "microsoft.azure.keyvault.3.0.5.nupkg.sha512"
     },
-    "Microsoft.Azure.KeyVault.WebKey/2.0.7": {
+    "Microsoft.Azure.KeyVault.WebKey/3.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MVSYao62R9rwl9KF+IsJm+XBLupJj1ma2lfwNeFlSWziXGAopnYK+YkDWqABOqNIV9kpza/MvNBxITzhlJIyIw==",
-      "path": "microsoft.azure.keyvault.webkey/2.0.7",
-      "hashPath": "microsoft.azure.keyvault.webkey.2.0.7.nupkg.sha512"
+      "sha512": "sha512-LmvQxr3qaK1rEMcsQCIz88T4LT6Mskd3mS425iXGFargt/FHS/p4lT++gBlsB3IZyU/opM7v8Yruzp13xu/I8g==",
+      "path": "microsoft.azure.keyvault.webkey/3.0.5",
+      "hashPath": "microsoft.azure.keyvault.webkey.3.0.5.nupkg.sha512"
     },
-    "Microsoft.Azure.Services.AppAuthentication/1.0.1": {
+    "Microsoft.Azure.Services.AppAuthentication/1.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oSVQ+YLgn0PfDLBRwOtHrkw06Pc6HvqIVrtFFWMg/1eafY+Hbrm1CSXnzXKXJwqUUv0ynvuwqzjN+IFR3g588w==",
-      "path": "microsoft.azure.services.appauthentication/1.0.1",
-      "hashPath": "microsoft.azure.services.appauthentication.1.0.1.nupkg.sha512"
+      "sha512": "sha512-yUjpTo8aRNKcpW+B789060jgmfQF16um/3VKH/BhwNwB7GOvM7HSYRcpebhe1LjsMa4D2GtFhmpI46C10xOtOQ==",
+      "path": "microsoft.azure.services.appauthentication/1.5.0",
+      "hashPath": "microsoft.azure.services.appauthentication.1.5.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -5049,12 +5093,12 @@
       "path": "microsoft.identity.client/3.0.8",
       "hashPath": "microsoft.identity.client.3.0.8.nupkg.sha512"
     },
-    "Microsoft.IdentityModel.Clients.ActiveDirectory/3.14.2": {
+    "Microsoft.IdentityModel.Clients.ActiveDirectory/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TNsJJMiRnkeby1ovThVoV9yFsPWjAdluwOA+Nf0LtSsBVVrKQv8Qp4kYOgyNwMVj+pDwbhXISySk+4HyHVWNZQ==",
-      "path": "microsoft.identitymodel.clients.activedirectory/3.14.2",
-      "hashPath": "microsoft.identitymodel.clients.activedirectory.3.14.2.nupkg.sha512"
+      "sha512": "sha512-5zCom0plcWSAuPp2B/Fo7XFKdrPUOaE+1dhVW5Ui2Gny7YYv1fDJ1Z8GeZEJuCd3rKN4UBO834wPEhU5gIPQMw==",
+      "path": "microsoft.identitymodel.clients.activedirectory/5.2.0",
+      "hashPath": "microsoft.identitymodel.clients.activedirectory.5.2.0.nupkg.sha512"
     },
     "Microsoft.Net.Http.Headers/1.0.2": {
       "type": "package",
@@ -5406,12 +5450,12 @@
       "path": "system.appcontext/4.3.0",
       "hashPath": "system.appcontext.4.3.0.nupkg.sha512"
     },
-    "System.Buffers/4.3.0": {
+    "System.Buffers/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ratu44uTIHgeBeI0dE8DWvmXVBSo4u7ozRZZHOMmK/JPpYyo0dAfgSiHlpiObMQ5lEtEyIXA40sKRYg5J6A8uQ==",
-      "path": "system.buffers/4.3.0",
-      "hashPath": "system.buffers.4.3.0.nupkg.sha512"
+      "sha512": "sha512-pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+      "path": "system.buffers/4.5.0",
+      "hashPath": "system.buffers.4.5.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -5574,6 +5618,13 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
     },
+    "System.Dynamic.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SNVi1E/vfWUAs/WYKhE9+qlS6KqK0YVhnlT0HQtr8pMIA8YX3lwy3uPMownDwdYISBdmAF/2holEIldVp85Wag==",
+      "path": "system.dynamic.runtime/4.3.0",
+      "hashPath": "system.dynamic.runtime.4.3.0.nupkg.sha512"
+    },
     "System.Globalization/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5678,6 +5729,13 @@
       "sha512": "sha512-m6icV6TqQOAdgt5N/9I5KNpjom/5NFtkmGseEH+AK/hny8XrytLH3+b5M8zL/Ycg3fhIocFpUMyl/wpFnVRvdw==",
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
     "System.ObjectModel/4.3.0": {
       "type": "package",
@@ -6802,7 +6860,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Dynamic.Runtime/4.1.2.0": {
+    "System.Dynamic.Runtime.Reference/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -7007,7 +7065,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Numerics.Vectors/4.1.6.0": {
+    "System.Numerics.Vectors.Reference/4.1.6.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

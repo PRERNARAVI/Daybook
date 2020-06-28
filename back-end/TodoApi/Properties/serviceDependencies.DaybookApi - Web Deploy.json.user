@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2020-06-28T07:48:21.5704577Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "HackathonApivaultResourceGroup"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "e5f0cbd5-b3da-448a-b030-af4cc6513f2a"
+    }
+  }
+}

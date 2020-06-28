@@ -49,7 +49,6 @@ C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
-C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Microsoft.Rest.ClientRuntime.dll
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Microsoft.Rest.ClientRuntime.Azure.dll
@@ -171,3 +170,4 @@ C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.1\HackathonApi.pdb
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.1\HackathonApi.genruntimeconfig.cache
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Properties\serviceDependencies.DaybookApi - Web Deploy.json
+C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Azure.Core.dll
