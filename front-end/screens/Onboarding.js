@@ -19,15 +19,14 @@ export default class Onboarding extends React.Component {
           <ImageBackground
             source={ HomePageWallPaper }
             style={styles.image}
-          />
-        </View>
-        <Block flex space="between" style={styles.padded}>
+          >
+          <Block flex space="between" style={styles.padded}>
           <Block flex space="around" style={{ zIndex: 2 }}>
             <Block>
               <Block>
-                <Text color="black" size={60}>Daybook</Text>
+                <Text color="white" size={70} style={styles.textPosition}>Daybook</Text>
               </Block>
-              <Text size={16} color="black">
+              <Text size={20} color="white">
                 A Mental Health Journaling App!
               </Text>
             </Block>
@@ -35,13 +34,15 @@ export default class Onboarding extends React.Component {
               <Button
                 shadowless
                 style={styles.button}
-                color={materialTheme.COLORS.BUTTON_COLOR}
+                color="#001f7d"
                 onPress={() => navigation.navigate('App')}>
                 GET STARTED
               </Button>
             </Block>
           </Block>
         </Block>
+        </ImageBackground>
+        </View>
       </Block>
     );
   }
@@ -50,11 +51,16 @@ export default class Onboarding extends React.Component {
 const styles = StyleSheet.create({
   container: {
     /**backgroundColor: theme.COLORS.BLACK,*/
-    flex: 2,
-    flexDirection: "column"
+    flex: 1,
+    
+  },
+  textPosition: {
+    justifyContent: 'flex-start',
+    paddingTop: theme.SIZES.BASE * 3, 
   },
   padded: {
     paddingHorizontal: theme.SIZES.BASE * 2,
+    paddingTop: theme.SIZES.BASE * 4,
     position: 'relative',
     bottom: theme.SIZES.BASE,
   },
