@@ -12,38 +12,70 @@ const survey = [
         questionText: 'Welcome to your Tasks for Today!'
     },
     {
+        questionType: 'SelectionGroup',
+        questionText:
+            "Which of the following are you struggling with?",
+        questionId: 'struggle',
+        options: [
+            {
+                optionText: 'Depression',
+                value: 'depression'
+            },
+            {
+                optionText: 'Anxiety',
+                value: 'anxiety'
+            },
+            {
+                optionText: 'PTSD',
+                value: 'PSTD'
+            },
+            {
+                optionText: 'Eating Disorder',
+                value: 'afraid'
+            },
+            {
+                optionText: 'Personality Disorder',
+                value: 'disgusted'
+            },
+            {
+                optionText: 'Coping with COVID-19',
+                value: 'covid'
+            },
+        ]
+    },
+    {
         questionType: 'MultipleSelectionGroup',
         questionText:
             "How are you feeling today?",
         questionId: 'feeling',
         questionSettings: {
             maxMultiSelect: 3,
-            minMultiSelect: 2,
+            minMultiSelect: 1,
         },
         options: [
             {
-                optionText: 'Anxious',
-                value: 'anxious'
+                optionText: 'Happy',
+                value: 'happy'
             },
             {
                 optionText: 'Sad',
                 value: 'sad'
             },
             {
-                optionText: 'Frustrated',
-                value: 'frustrated'
+                optionText: 'Angry',
+                value: 'angry'
             },
             {
-                optionText: 'Happy',
-                value: 'happy'
+                optionText: 'Afraid',
+                value: 'afraid'
             },
             {
-                optionText: 'Relaxed',
-                value: 'relaxed'
+                optionText: 'Disgusted',
+                value: 'disgusted'
             },
             {
-                optionText: 'Excited',
-                value: 'excited'
+                optionText: 'Surprised',
+                value: 'surprised'
             },
         ]
     },
