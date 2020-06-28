@@ -21,10 +21,6 @@ namespace HackathonApi.Models.Dto
         public double Negative { get; set; }
         public double Neutral { get; set; }
 
-        [ForeignKey("UserData")]
-        public int UserRefId { get; set; }
-        public UserData UserData { get; set; }
-
     }
 
     public enum Mood

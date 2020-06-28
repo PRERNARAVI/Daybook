@@ -12,9 +12,6 @@ namespace HackathonApi.Models.Dto
         public int UserId { get; set; }
         public string UserName { get; set; }
         public MentalHealth MentalHealth { get; set; }
-
-        public ICollection<JournalEntry> JournalEntries { get; set;}
-        public ICollection<GoalData> Goals { get; set; }
     }
 
     public enum MentalHealth

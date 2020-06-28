@@ -37,6 +37,10 @@ namespace HackathonApi
             services.AddDbContext<JournalEntryContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
             services.AddDbContext<UserDataContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
             services.AddDbContext<GoalDataContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<GoalContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<FeelingContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<PromptContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            services.AddDbContext<ProblemContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
             services.AddControllers();
             services.AddSwaggerDocument();
         }
