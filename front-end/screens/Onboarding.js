@@ -76,4 +76,9 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center" 
   },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center" 
+  },
 });

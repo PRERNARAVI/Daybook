@@ -48,8 +48,10 @@ namespace HackathonApi.Models.Service
         public async Task<JournalEntry> GetTextAnalytics(UserEntry userEntry)
         {
             // You will implement these methods later in the quickstart.
-
+            Random rnd = new Random();
             JournalEntry journalEntry = new JournalEntry();
+            journalEntry.JournalKey = rnd.Next(1, 100000);
+            journalEntry.TimeStamped = DateTime.Now;
             journalEntry.Prompt = userEntry.Prompt;
             journalEntry.Contents = userEntry.Contents;
             journalEntry.Feeling = userEntry.Feeling;
@@ -59,7 +61,7 @@ namespace HackathonApi.Models.Service
             journalEntry.Negative = sentimentPercentages[1];
             journalEntry.Neutral = sentimentPercentages[2];
 
-            return new JournalEntry();
+            return journalEntry;
         }
 
         static double[] SentimentAnalysisPercentages(TextAnalyticsClient client, UserEntry userEntry)

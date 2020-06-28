@@ -8,5 +8,6 @@ export default [
   {
     title: "Past Entries",
     image: "https://www.growmeda.com/wp-content/uploads/2019/10/hubspot-cos-template-design-company-growmeda-india.png"
+
   }
 ];

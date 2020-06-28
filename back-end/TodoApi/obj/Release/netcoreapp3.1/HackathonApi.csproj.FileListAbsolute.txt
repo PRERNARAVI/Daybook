@@ -171,3 +171,4 @@ C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Release\netcoreapp3.1\HackathonApi.genruntimeconfig.cache
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Properties\serviceDependencies.DaybookApi - Web Deploy.json
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Azure.Core.dll
+C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Release\netcoreapp3.1\Azure.AI.TextAnalytics.dll

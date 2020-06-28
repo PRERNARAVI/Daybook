@@ -1,6 +1,8 @@
 import React from 'react';
 import { withNavigation } from '@react-navigation/compat';
+
 import { StyleSheet, Dimensions, Image, TouchableWithoutFeedback, ScrollView, View } from 'react-native';
+
 import { Block, Text, theme } from 'galio-framework';
 
 import materialTheme from '../constants/Theme';
@@ -10,7 +12,9 @@ const { width } = Dimensions.get('screen');
 const card = [
     {
       id: "0",
+
       title: "What are you feeling upset about today? Why do you think you are feeling this way?",
+
       //picture: require('./assets/starry.jpg'),
       content: <Text>Starry Night</Text>
     },
@@ -87,6 +91,7 @@ const styles = StyleSheet.create({
     height: 215,
     width: width - theme.SIZES.BASE * 3,
   },
+
  
   prompt: {
     height: 200,

@@ -22,7 +22,6 @@ class Product extends React.Component {
         <TouchableWithoutFeedback onPress={() => navigation.navigate('Questions')}>
           <Block flex space="between" style={styles.productDescription}>
             <Text size={14} style={styles.productTitle}>{product.title}</Text>
-            
           </Block>
         </TouchableWithoutFeedback>
       </Block>

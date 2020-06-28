@@ -18,6 +18,7 @@ const survey = [
         options: [
             {
                 optionText: 'Depression',
+
                 value: 'depression',
             },
             {
@@ -199,13 +200,17 @@ export default class Questions extends Component {
 
     renderFinishedButton(onPress, enabled) {
         return (
+
             <View style={{ backgroundColor: "#001f7d", flexGrow: 1, maxWidth: 100, 
             marginTop: 10, marginBottom: 10, borderRadius: 5 }}>
+
                 <Button
                     title={'Finished'}
                     onPress={() => this.props.navigation.navigate('Prompt')}
                     disabled={!enabled}
+
                     color="white"
+
                 />
             </View>
         );
@@ -215,13 +220,17 @@ export default class Questions extends Component {
         return (
             <View
                 key={`selection_button_view_${index}`}
+
                 style={{ marginTop: 5, marginBottom: 5 }}
+
             >
                 <Button
                     title={data.optionText}
                     onPress={onPress}
+
                     color={isSelected ? "white" : "#809fff"}
                     style={isSelected ? { fontWeight: '600' } : {}} 
+
                     key={`button_${index}`}
                 />
             </View>
@@ -317,9 +326,11 @@ const styles = StyleSheet.create({
         minWidth: '70%',
         maxWidth: '90%',
         alignItems: 'stretch',
+
         elevation: 20,
         borderRadius: 10,
         flex: 1
+
          
     },
     answersContainer: {
