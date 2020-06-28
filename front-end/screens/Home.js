@@ -18,32 +18,11 @@ export default class Home extends React.Component {
         color="black"
         style={styles.search}
         iconContent={iconCamera}
-        placeholder="What are you looking for?"
-        onFocus={() => navigation.navigate('Pro')}
+        placeholder="Search"
       />
     )
   }
   
-  renderTabs = () => {
-    const { navigation } = this.props;
-
-    return (
-      <Block row style={styles.tabs}>
-        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
-          <Block row middle>
-            <Icon name="grid" family="feather" style={{ paddingRight: 8 }} />
-            <Text size={16} style={styles.tabTitle}>Categories</Text>
-          </Block>
-        </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
-          <Block row middle>
-            <Icon size={16} name="camera-18" family="GalioExtra" style={{ paddingRight: 8 }} />
-            <Text size={16} style={styles.tabTitle}>Best Deals</Text>
-          </Block>
-        </Button>
-      </Block>
-    )
-  }
 
   renderProducts = () => {
     return (
@@ -51,13 +30,9 @@ export default class Home extends React.Component {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
         <Block flex>
-          <Product product={products[0]} horizontal />
-          <Block flex row>
-            <Product product={products[1]} style={{ marginRight: theme.SIZES.BASE }} />
-            <Product product={products[2]} />
-          </Block>
-          <Product product={products[3]} horizontal />
-          <Product product={products[4]} full />
+          <Product product={products[0]} horizontal 
+          onPress={() => navigation.navigate('Questions')}/>
+          <Product product={products[1]} horizontal />
         </Block>
       </ScrollView>
     )
@@ -118,6 +93,6 @@ const styles = StyleSheet.create({
   },
   products: {
     width: width - theme.SIZES.BASE * 2,
-    paddingVertical: theme.SIZES.BASE * 2,
+    paddingVertical: theme.SIZES.BASE * 3,
   },
 });
