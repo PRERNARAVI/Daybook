@@ -10,7 +10,7 @@ const { width } = Dimensions.get('screen');
 const card = [
     {
       id: "0",
-      title: "Prompt 1",
+      title: "What are you feeling upset about today? Why do you think you are feeling this way?",
       //picture: require('./assets/starry.jpg'),
       content: <Text>Starry Night</Text>
     },
@@ -88,10 +88,11 @@ export default withNavigation(Prompt);
 
 const styles = StyleSheet.create({
   product: {
-    backgroundColor: "white",
+    backgroundColor: "#bfcfff",
     marginVertical: theme.SIZES.BASE,
     borderWidth: 0,
-    minHeight: 200,
+    minHeight: 0,
+    marginLeft: 25,
   },
   products: {
     justifyContent: 'center',
@@ -102,10 +103,16 @@ const styles = StyleSheet.create({
     color: "#001f7d",
     flex: 1,
     flexWrap: 'wrap',
-    paddingBottom: 6,
+    paddingBottom: 20,
+    fontFamily: "Avenir Next",
+    fontSize: 20,
+    alignContent: 'center',
+    textAlign: 'center',
+
   },
   productDescription: {
     padding: theme.SIZES.BASE / 2,
+    padding: 10,
   },
   imageContainer: {
     elevation: 1,
@@ -113,7 +120,7 @@ const styles = StyleSheet.create({
   image: {
     borderRadius: 3,
     marginHorizontal: theme.SIZES.BASE,
-    marginTop: 16,
+    marginTop: 1,
 
   },
   horizontalImage: {

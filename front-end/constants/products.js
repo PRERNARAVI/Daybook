@@ -3,9 +3,10 @@ import HomePageWallPaper from '../assets/images/HomeScreenWallpaper.jpg';
 export default [
   {
     title: "Tasks for Today",
-    image: "https://img.wallpapersafari.com/desktop/1366/768/96/16/WCpgJx.jpg"
+    image: "https://miro.medium.com/max/930/1*nf1y4N6Bs1L-9Zyv0sVbpg.png"
   },
   {
-    title: "View Past Entries",
+    title: "Past Entries",
+    image: "https://www.growmeda.com/wp-content/uploads/2019/10/hubspot-cos-template-design-company-growmeda-india.png"
   }
 ];
