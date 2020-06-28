@@ -10,6 +10,6 @@ namespace HackathonApi.Models.Dto
     {
         [Key]
         public Mood FeelingId { get; set; }
-        public string FeelingText { get; set; }
+        public string OptionText { get; set; }
     }
 }

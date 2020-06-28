@@ -15,7 +15,8 @@ const survey = [
         questionText:
             "Which of the following are you struggling with?",
         questionId: 'struggle',
-        options: [
+        options: await fetch('https://hackathonapi20200627131743.azurewebsites.net/api/Problems').json(),
+            /*[
             {
                 optionText: 'Depression',
 
@@ -41,7 +42,7 @@ const survey = [
                 optionText: 'Coping with COVID-19',
                 value: 'covid'
             },
-        ]
+        ]*/
     },
     {
         questionType: 'MultipleSelectionGroup',
@@ -52,7 +53,8 @@ const survey = [
             maxMultiSelect: 3,
             minMultiSelect: 1,
         },
-        options: [
+        options: await fetch('https://hackathonapi20200627131743.azurewebsites.net/api/Feelings').json(),
+        /*[
             {
                 optionText: 'Happy',
                 value: 'happy'
@@ -77,7 +79,7 @@ const survey = [
                 optionText: 'Surprised',
                 value: 'surprised'
             },
-        ]
+        ]*/
     },
     
     {

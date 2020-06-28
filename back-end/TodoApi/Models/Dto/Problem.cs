@@ -10,6 +10,6 @@ namespace HackathonApi.Models.Dto
     {
         [Key]
         public MentalHealth ProblemId { get; set; }
-        public string ProblemText { get; set; }
+        public string OptionText { get; set; }
     }
 }
