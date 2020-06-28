@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HackathonApi.Models.Context;
 using HackathonApi.Models.Dto;
+using HackathonApi.Models.Service;
 
 namespace HackathonApi.Controllers
 {
@@ -15,9 +16,11 @@ namespace HackathonApi.Controllers
     public class JournalEntriesController : ControllerBase
     {
         private readonly JournalEntryContext _context;
+        private readonly JournalEntryService _journalEntryService;
 
         public JournalEntriesController(JournalEntryContext context)
         {
+             _journalEntryService = new JournalEntryService();
             _context = context;
         }
 
@@ -78,8 +81,10 @@ namespace HackathonApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<JournalEntry>> PostJournalEntry(JournalEntry journalEntry)
+        public async Task<ActionResult<JournalEntry>> PostJournalEntry(UserEntry userEntry)
         {
+
+            JournalEntry journalEntry = await _journalEntryService.GetTextAnalytics();
             _context.JournalEntry.Add(journalEntry);
             await _context.SaveChangesAsync();
 

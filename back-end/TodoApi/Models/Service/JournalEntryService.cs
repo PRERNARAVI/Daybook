@@ -17,7 +17,8 @@ namespace HackathonApi.Models.Service
         {
             
         }
-        public async Task<JournalEntry> GetTextAnalytics()
+
+        public async Task<JournalEntry> GetTextAnalytics(UserEntry userEntry)
         {
             
             return new JournalEntry();

@@ -11,11 +11,12 @@ namespace HackathonApi.Models.Dto
     {
         [Key]
         public int JournalKey { get; set; }
-        public string Prompt { get; set; }
-        public string Header { get; set; }
-        public string Contents { get; set; }
         public DateTime TimeStamped { get; set; }
+        public string Prompt { get; set; }
+        public string Contents { get; set; }
         public Mood Feeling { get; set; }
+        public List<string> Keywords { get; set; }
+        public Analytics Analytics { get; set; }
 
     }
 
@@ -29,6 +30,12 @@ namespace HackathonApi.Models.Dto
         Angry
     };
 
+    public enum Analytics
+    {
+        Bad,
+        Okay,
+        Good
+    };
     
 
 }

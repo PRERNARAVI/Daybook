@@ -36,8 +36,8 @@ namespace HackathonApi
         {
             var res =  Configuration.GetSection("Secrets:Database:Name").Get<string[]>();
             services.AddDbContext<JournalEntryContext>(opt => opt.UseSqlServer(_keyVaultClient.GetSecretAsync(Configuration.GetSection("Secrets:Database:Name").Value).Result.Value));
+            
             services.AddControllers();
-
             services.AddSwaggerDocument();
         }
 
