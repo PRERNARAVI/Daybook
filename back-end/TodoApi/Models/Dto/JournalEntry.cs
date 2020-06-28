@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,8 +16,14 @@ namespace HackathonApi.Models.Dto
         public string Prompt { get; set; }
         public string Contents { get; set; }
         public Mood Feeling { get; set; }
-        public List<string> Keywords { get; set; }
-        public Analytics Analytics { get; set; }
+        public string Keywords { get; set; }
+        public double Positive { get; set; }
+        public double Negative { get; set; }
+        public double Neutral { get; set; }
+
+        [ForeignKey("UserData")]
+        public int UserRefId { get; set; }
+        public UserData UserData { get; set; }
 
     }
 
@@ -24,18 +31,10 @@ namespace HackathonApi.Models.Dto
     {
         Happy,
         Sad,
-        Anxious,
-        Nervous,
-        Stressed,
-        Angry
-    };
-
-    public enum Analytics
-    {
-        Bad,
-        Okay,
-        Good
+        Angry,
+        Afraid,
+        Disgusted,
+        Surprised
     };
     
-
 }

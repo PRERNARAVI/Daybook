@@ -33,7 +33,7 @@ namespace HackathonApi.Controllers
 
         // GET: api/JournalEntries/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<JournalEntry>> GetJournalEntry(long id)
+        public async Task<ActionResult<JournalEntry>> GetJournalEntry(int id)
         {
             var journalEntry = await _context.JournalEntry.FindAsync(id);
 
@@ -49,7 +49,7 @@ namespace HackathonApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutJournalEntry(long id, JournalEntry journalEntry)
+        public async Task<IActionResult> PutJournalEntry(int id, JournalEntry journalEntry)
         {
             if (id != journalEntry.JournalKey)
             {
@@ -84,7 +84,7 @@ namespace HackathonApi.Controllers
         public async Task<ActionResult<JournalEntry>> PostJournalEntry(UserEntry userEntry)
         {
 
-            JournalEntry journalEntry = await _journalEntryService.GetTextAnalytics();
+            JournalEntry journalEntry = await _journalEntryService.GetTextAnalytics(userEntry);
             _context.JournalEntry.Add(journalEntry);
             await _context.SaveChangesAsync();
 
@@ -93,7 +93,7 @@ namespace HackathonApi.Controllers
 
         // DELETE: api/JournalEntries/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<JournalEntry>> DeleteJournalEntry(long id)
+        public async Task<ActionResult<JournalEntry>> DeleteJournalEntry(int id)
         {
             var journalEntry = await _context.JournalEntry.FindAsync(id);
             if (journalEntry == null)
@@ -107,7 +107,7 @@ namespace HackathonApi.Controllers
             return journalEntry;
         }
 
-        private bool JournalEntryExists(long id)
+        private bool JournalEntryExists(int id)
         {
             return _context.JournalEntry.Any(e => e.JournalKey == id);
         }

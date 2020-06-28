@@ -336,3 +336,7 @@ C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Debug\netcoreapp3.1\
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.AzureKeyVault.dll
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.DaybookApi - Web Deploy.json
+C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Debug\netcoreapp3.1\HackathonApi.csproj.CoreCompileInputs.cache
+C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Debug\netcoreapp3.1\HackathonApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\t-ryfite\source\repos\Daybook\back-end\TodoApi\obj\Debug\netcoreapp3.1\HackathonApi.MvcApplicationPartsAssemblyInfo.cache
