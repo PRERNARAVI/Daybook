@@ -22,6 +22,7 @@ class Product extends React.Component {
         <TouchableWithoutFeedback onPress={() => navigation.navigate('Questions')}>
           <Block flex space="between" style={styles.productDescription}>
             <Text size={14} style={styles.productTitle}>{product.title}</Text>
+            
           </Block>
         </TouchableWithoutFeedback>
       </Block>
@@ -33,7 +34,7 @@ export default withNavigation(Product);
 
 const styles = StyleSheet.create({
   product: {
-    backgroundColor: "white",
+    backgroundColor: "#bfcfff",
     marginVertical: theme.SIZES.BASE,
     borderWidth: 0,
     minHeight: 200,
@@ -43,6 +44,14 @@ const styles = StyleSheet.create({
     flex: 1,
     flexWrap: 'wrap',
     paddingBottom: 6,
+    fontSize: 30,
+    marginTop: 40,
+    fontFamily: "Avenir Next",
+    fontWeight: "600",
+    alignContent: "center",
+    textAlign: "center",
+    marginRight: 25,
+
   },
   productDescription: {
     padding: theme.SIZES.BASE / 2,
@@ -53,7 +62,7 @@ const styles = StyleSheet.create({
   image: {
     borderRadius: 3,
     marginHorizontal: theme.SIZES.BASE,
-    marginTop: 16,
+    marginTop: 35,
 
   },
   horizontalImage: {
