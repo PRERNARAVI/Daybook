@@ -49,11 +49,11 @@ const styles = StyleSheet.create({
         margin: 20
     },
     button: {
-        width: width - theme.SIZES.BASE * 4,
+        width: width - theme.SIZES.BASE * 2,
         height: theme.SIZES.BASE * 3,
         shadowRadius: 0,
         shadowOpacity: 0,
-        marginLeft: 31,
+        marginLeft: 15,
     },
     textEntry: {
         fontSize: 20,

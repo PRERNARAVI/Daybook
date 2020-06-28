@@ -18,7 +18,7 @@ const survey = [
         options: [
             {
                 optionText: 'Depression',
-                value: 'depression'
+                value: 'depression',
             },
             {
                 optionText: 'Anxiety',
@@ -164,6 +164,7 @@ export default class Questions extends Component {
     renderPreviousButton(onPress, enabled) {
         return (
             <View style={{ backgroundColor: "#bfcfff",
+            color: "#002080",
             flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10,
             borderRadius: 5, justifyContent: 'center' }}>
                 <Button
@@ -171,6 +172,7 @@ export default class Questions extends Component {
                     onPress={onPress}
                     disabled={!enabled}
                     backgroundColor="#002080"
+                    
                     title={'Previous'}
                 />
             </View>
@@ -218,8 +220,8 @@ export default class Questions extends Component {
                 <Button
                     title={data.optionText}
                     onPress={onPress}
-                    color={isSelected ? "#002080" : "#002080"}
-                    style={isSelected ? { fontWeight: 'bold' } : {}} 
+                    color={isSelected ? "white" : "#809fff"}
+                    style={isSelected ? { fontWeight: '600' } : {}} 
                     key={`button_${index}`}
                 />
             </View>
@@ -332,15 +334,12 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     surveyContainer: {
-        marginTop: 100,
+        marginTop: 60,
         position: 'relative',
         flex: 0,
         width: 'auto',
         backgroundColor: 'white',
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius: 5,
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 5,
+        borderRadius: 10,
         paddingTop: '10%',
         alignContent: 'center',
         padding: 5,
@@ -349,8 +348,14 @@ const styles = StyleSheet.create({
     },
     selectionGroupContainer: {
         flexDirection: 'column',
-        backgroundColor: 'white',
-        alignContent: 'flex-start'
+        backgroundColor: '#002080',
+        borderRadius: 10,
+        margin: 10,
+        fontWeight: '500',
+        justifyContent: 'space-evenly',
+        paddingTop: 20,
+        paddingBottom: 20
+        
     },
     background: {
         flex: 1,
@@ -360,9 +365,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     questionText: {
-        marginBottom: 10,
+        
         fontSize: 20,
         color: 'black',
+        fontFamily: "Avenir Next",
+        fontWeight: '600',
+        textAlign: 'center'
         
     },
     textBox: {
@@ -389,6 +397,9 @@ const styles = StyleSheet.create({
     infoText: {
         marginBottom: 20,
         fontSize: 20,
-        marginLeft: 10
+        marginLeft: 10,
+        fontFamily: "Avenir Next",
+        fontWeight: '600',
+        textAlign: 'center'
     },
 });

@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     height: theme.SIZES.BASE * 3,
     shadowRadius: 0,
     shadowOpacity: 0,
+    borderRadius: 5
   },
   image: {
     flex: 1,
