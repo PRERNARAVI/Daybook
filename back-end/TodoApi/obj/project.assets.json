@@ -10743,26 +10743,29 @@
     ]
   },
   "packageFolders": {
-    "/Users/g/.nuget/packages/": {}
+    "C:\\Users\\t-ryfite\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/HackathonApi.csproj",
+      "projectUniqueName": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\HackathonApi.csproj",
       "projectName": "HackathonApi",
-      "projectPath": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/HackathonApi.csproj",
-      "packagesPath": "/Users/g/.nuget/packages/",
-      "outputPath": "/Users/geetanshisharma/Documents/Daybook/back-end/TodoApi/obj/",
+      "projectPath": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\HackathonApi.csproj",
+      "packagesPath": "C:\\Users\\t-ryfite\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\t-ryfite\\source\\repos\\Daybook\\back-end\\TodoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/g/.config/NuGet/NuGet.Config"
+        "C:\\Users\\t-ryfite\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://office.pkgs.visualstudio.com/_packaging/Office/nuget/v3/index.json": {}
+        "https://microsoftit.pkgs.visualstudio.com/_packaging/MicrosoftIT/nuget/v3/index.json": {},
+        "https://microsoftit.pkgs.visualstudio.com/_packaging/PS.GRM/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -10851,7 +10854,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
