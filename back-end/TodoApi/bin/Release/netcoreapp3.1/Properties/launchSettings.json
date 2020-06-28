@@ -17,6 +17,10 @@
       "RetryCount": 3,
       "RetryIntervalInMiliSeconds": 500,
       "IsExponential": true
+    },
+    "Database": {
+      "Name": "https://hackathonapivault.vault.azure.net/secrets/ConnectionStrings--hackathondatabase/05a7e86e6833435abdfad5095dec37c9"
+      
     }
   },
   "profiles": {
