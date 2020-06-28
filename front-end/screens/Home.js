@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Dimensions, ScrollView } from 'react-native';
+import { StyleSheet, Dimensions, ScrollView, View } from 'react-native';
 import { Button, Block, Text, Input, theme } from 'galio-framework';
 
 import { Icon, Product } from '../components/';
@@ -26,6 +26,7 @@ export default class Home extends React.Component {
 
   renderProducts = () => {
     return (
+      <View style={styles.back}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
@@ -35,6 +36,7 @@ export default class Home extends React.Component {
           <Product product={products[1]} horizontal />
         </Block>
       </ScrollView>
+      </View>
     )
   }
 
@@ -92,7 +94,15 @@ const styles = StyleSheet.create({
     borderRightColor: theme.COLORS.MUTED,
   },
   products: {
+    backgroundColor: "#002080",
     width: width - theme.SIZES.BASE * 2,
-    paddingVertical: theme.SIZES.BASE * 3,
+    paddingVertical: theme.SIZES.BASE * 4,
+    marginLeft: 17
   },
+  back: {
+    backgroundColor: "#002080",
+    width: width,
+    flex: 1
+  }
 });
+

@@ -1,6 +1,8 @@
 import React from 'react';
 import { withNavigation } from '@react-navigation/compat';
-import { StyleSheet, Dimensions, Image, TouchableWithoutFeedback, ScrollView } from 'react-native';
+
+import { StyleSheet, Dimensions, Image, TouchableWithoutFeedback, ScrollView, View } from 'react-native';
+
 import { Block, Text, theme } from 'galio-framework';
 
 import materialTheme from '../constants/Theme';
@@ -10,7 +12,9 @@ const { width } = Dimensions.get('screen');
 const card = [
     {
       id: "0",
-      title: "Prompt 1",
+
+      title: "What are you feeling upset about today? Why do you think you are feeling this way?",
+
       //picture: require('./assets/starry.jpg'),
       content: <Text>Starry Night</Text>
     },
@@ -37,47 +41,15 @@ class Prompt extends React.Component {
         <ScrollView
             showsVerticalScrollIndicator={false}
             contentContainerStyle={styles.products}>
-        <Block flex>
-            {/** Item 1 */}
-            <Block row={horizontal} card flex style={[styles.product, styles.shadow, style]}>
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Entry')}>
-                <Block flex style={[styles.imageContainer, styles.shadow]}>
-                    <Image source={{  }} style={imageStyles} />
-                </Block>
-                </TouchableWithoutFeedback>
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Entry')}>
-                <Block flex space="between" style={styles.productDescription}>
-                    <Text size={14} style={styles.productTitle}>{card[0].title}</Text>
-                </Block>
-                </TouchableWithoutFeedback>
-            </Block>
-            {/** Item 2 */}
-            <Block row={horizontal} card flex style={[styles.product, styles.shadow, style]}>
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Prompt')}>
-                <Block flex style={[styles.imageContainer, styles.shadow]}>
-                    <Image source={{  }} style={imageStyles} />
-                </Block>
-                </TouchableWithoutFeedback>
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Prompt')}>
-                <Block flex space="between" style={styles.productDescription}>
-                    <Text size={14} style={styles.productTitle}>{card[1].title}</Text>
-                </Block>
-                </TouchableWithoutFeedback>
-            </Block>
-            {/** Item 3 */}
-            <Block row={horizontal} card flex style={[styles.product, styles.shadow, style]}>
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Prompt')}>
-                <Block flex style={[styles.imageContainer, styles.shadow]}>
-                    <Image source={{  }} style={imageStyles} />
-                </Block>
-                </TouchableWithoutFeedback>
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Prompt')}>
-                <Block flex space="between" style={styles.productDescription}>
-                    <Text size={14} style={styles.productTitle}>{card[2].title}</Text>
-                </Block>
-                </TouchableWithoutFeedback>
-            </Block>
-        </Block>
+            <View style={styles.prompt} onPress={() => navigation.navigate('Entry')}>
+            <Text style={styles.textEntry} onPress={() => navigation.navigate('Entry')}>What are you feeling upset about today? Why do you think you are feeling this way?</Text>
+            </View>
+            <View style={styles.prompt}>
+            <Text style={styles.textEntry}>Prompt 2</Text>
+            </View>
+            <View style={styles.prompt}>
+            <Text style={styles.textEntry}>Prompt 3</Text>
+            </View>
       </ScrollView>
       
     );
@@ -88,32 +60,27 @@ export default withNavigation(Prompt);
 
 const styles = StyleSheet.create({
   product: {
-    backgroundColor: "white",
+    backgroundColor: "#bfcfff",
     marginVertical: theme.SIZES.BASE,
     borderWidth: 0,
-    minHeight: 200,
+    minHeight: 0,
+    marginLeft: 35,
+    marginRight: 35,
+    paddingTop: 0,
   },
   products: {
     justifyContent: 'center',
-    width: width - theme.SIZES.BASE * 2,
+    //width: width - theme.SIZES.BASE * 2,
     paddingVertical: theme.SIZES.BASE * 3,
+    backgroundColor: "#0000b3",
+    marginRight: 0
   },
-  productTitle: {
-    color: "#001f7d",
-    flex: 1,
-    flexWrap: 'wrap',
-    paddingBottom: 6,
-  },
-  productDescription: {
-    padding: theme.SIZES.BASE / 2,
-  },
-  imageContainer: {
-    elevation: 1,
-  },
+
+
   image: {
     borderRadius: 3,
     marginHorizontal: theme.SIZES.BASE,
-    marginTop: 16,
+    marginTop: 1,
 
   },
   horizontalImage: {
@@ -124,11 +91,20 @@ const styles = StyleSheet.create({
     height: 215,
     width: width - theme.SIZES.BASE * 3,
   },
-  shadow: {
-    shadowColor: theme.COLORS.BLACK,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 4,
-    shadowOpacity: 0.1,
-    elevation: 2,
+
+ 
+  prompt: {
+    height: 200,
+    backgroundColor: '#bfcfff',
+    borderRadius: 10,
+    padding: 35,
+    margin: 30
   },
+    textEntry: {
+        fontSize: 20,
+        textAlign: 'center',
+        fontFamily: "Avenir Next",
+        fontWeight: '600',
+        color: '#002080'
+    }
 });

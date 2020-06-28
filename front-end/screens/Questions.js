@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, Button, ScrollView, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Button, ScrollView, Text, TextInput, View, CheckBox } from 'react-native';
 import { SimpleSurvey } from 'react-native-simple-survey';
 //import { COLORS } from '../res/validColors';
 
-const GREEN = 'rgba(141,196,63,1)';
-const PURPLE = 'rgba(108,48,237,1)';
+
 
 const survey = [
     {
@@ -19,7 +18,8 @@ const survey = [
         options: [
             {
                 optionText: 'Depression',
-                value: 'depression'
+
+                value: 'depression',
             },
             {
                 optionText: 'Anxiety',
@@ -90,7 +90,7 @@ export default class Questions extends Component {
     static navigationOptions = () => {
         return {
             headerStyle: {
-                backgroundColor: GREEN,
+                backgroundColor: "black",
                 height: 40,
                 elevation: 5,
             },
@@ -164,12 +164,16 @@ export default class Questions extends Component {
 
     renderPreviousButton(onPress, enabled) {
         return (
-            <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
+            <View style={{ backgroundColor: "#bfcfff",
+            color: "#002080",
+            flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10,
+            borderRadius: 5, justifyContent: 'center' }}>
                 <Button
-                    color={GREEN}
+                    color="#002080"
                     onPress={onPress}
                     disabled={!enabled}
-                    backgroundColor={GREEN}
+                    backgroundColor="#002080"
+                    
                     title={'Previous'}
                 />
             </View>
@@ -178,13 +182,17 @@ export default class Questions extends Component {
 
     renderNextButton(onPress, enabled) {
         return (
-            <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
+            <View style={{ backgroundColor: "#001f7d",
+            flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10, 
+            borderRadius: 5, justifyContent: 'center'}}>
                 <Button
-                    color={GREEN}
+                    fontSize='10'
+                    color="white"
                     onPress={onPress}
                     disabled={!enabled}
-                    backgroundColor={GREEN}
+                    backgroundColor="white"
                     title={'Next'}
+                    
                 />
             </View>
         );
@@ -192,12 +200,17 @@ export default class Questions extends Component {
 
     renderFinishedButton(onPress, enabled) {
         return (
-            <View style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}>
+
+            <View style={{ backgroundColor: "#001f7d", flexGrow: 1, maxWidth: 100, 
+            marginTop: 10, marginBottom: 10, borderRadius: 5 }}>
+
                 <Button
                     title={'Finished'}
                     onPress={() => this.props.navigation.navigate('Prompt')}
                     disabled={!enabled}
-                    color={GREEN}
+
+                    color="white"
+
                 />
             </View>
         );
@@ -207,13 +220,17 @@ export default class Questions extends Component {
         return (
             <View
                 key={`selection_button_view_${index}`}
-                style={{ marginTop: 5, marginBottom: 5, justifyContent: 'flex-start' }}
+
+                style={{ marginTop: 5, marginBottom: 5 }}
+
             >
                 <Button
                     title={data.optionText}
                     onPress={onPress}
-                    color={isSelected ? GREEN : PURPLE}
-                    style={isSelected ? { fontWeight: 'bold' } : {}} 
+
+                    color={isSelected ? "white" : "#809fff"}
+                    style={isSelected ? { fontWeight: '600' } : {}} 
+
                     key={`button_${index}`}
                 />
             </View>
@@ -309,10 +326,11 @@ const styles = StyleSheet.create({
         minWidth: '70%',
         maxWidth: '90%',
         alignItems: 'stretch',
-        justifyContent: 'center',
+
         elevation: 20,
         borderRadius: 10,
-        flex: 2
+        flex: 1
+
          
     },
     answersContainer: {
@@ -327,21 +345,28 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     surveyContainer: {
+        marginTop: 60,
+        position: 'relative',
+        flex: 0,
         width: 'auto',
-        alignSelf: 'center',
         backgroundColor: 'white',
-        borderBottomLeftRadius: 5,
-        borderBottomRightRadius: 5,
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 5,
+        borderRadius: 10,
+        paddingTop: '10%',
         alignContent: 'center',
         padding: 5,
-        flexGrow: 0,
+        
+        
     },
     selectionGroupContainer: {
         flexDirection: 'column',
-        backgroundColor: 'white',
-        alignContent: 'flex-end',
+        backgroundColor: '#002080',
+        borderRadius: 10,
+        margin: 10,
+        fontWeight: '500',
+        justifyContent: 'space-evenly',
+        paddingTop: 20,
+        paddingBottom: 20
+        
     },
     background: {
         flex: 1,
@@ -351,8 +376,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     questionText: {
-        marginBottom: 20,
-        fontSize: 20
+        
+        fontSize: 20,
+        color: 'black',
+        fontFamily: "Avenir Next",
+        fontWeight: '600',
+        textAlign: 'center'
+        
     },
     textBox: {
         borderWidth: 1,
@@ -378,6 +408,9 @@ const styles = StyleSheet.create({
     infoText: {
         marginBottom: 20,
         fontSize: 20,
-        marginLeft: 10
+        marginLeft: 10,
+        fontFamily: "Avenir Next",
+        fontWeight: '600',
+        textAlign: 'center'
     },
 });
