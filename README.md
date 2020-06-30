@@ -1,2 +1,8 @@
 # Daybook
-Mental Health Journaling App!
+How can we help teens self-manage their mental health in a cost-free, mindful, effective way that actually promotes long-term well-being? Introducing Daybook! 
+
+Daybook is an intelligent journaling app that uses information about the user’s mood and the side effects of the user’s mental health disorder in order to (1) generate prompts for the user to journal about, and (2) recommend small goals/action items for the next day (e.g. go on a run, make your bed, get 15 mins of sun). By tailoring the prompts to how the user feels and giving them small goals to work towards, we’re helping users self-manage and improve their own mental well-being.
+
+Our target audience will be 13-22 year old students in the U.S. with smartphone access, and we did this for three main reasons. First of all, this market is the easiest to enter and is most familiar to us. Second, the U.S. is one of the countries that has the least amount of stigmas surrounding mental health in the world. Finally, market research shows that this audience of roughly teenaged students really care about managing their mental health, since we’ve been raised in a time that emphasizes mental well-being. 
+
+Our target users want to control their mental health, but don’t have the money (that $150 per session), the time, or the patience to get professional help from a therapist. When they turn to apps for mindfulness or mental health management, they’re not effective because they’re not personalized, so users don’t see real change in their mental state. So, we wanted Daybook to be a way for our target users to self-manage their mental health in a cost-free, mindful, effective way that actually promotes long-term well-being.
