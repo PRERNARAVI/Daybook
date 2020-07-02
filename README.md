@@ -31,9 +31,13 @@ React Native - So that this app is accessible and compatible with any mobile dev
 <h4>Back-end</h4>
 
 Azure SQL Database - To store user data on the public cloud and have an intelligent, scalable, relational database
+
 ASP.NET Core Web Application - To create a REST API hosted on web services.
+
 Swagger UI for API - To create an easy-to-use UI for our REST API.
+
 Azure Cognitive Services Text Analytics - To accomplish the intelligent journaling functionality. Specifically, it leverages sentiment analysis to process the journal entries the user writes and decide what their task or action item should be. For example, the more negative their journal entries are, the less intense their tasks will be.
+
 Azure Cognitive Services Personalizer - To accomplish the recommendation of tasks and prompts we used this reinforcement learning system.
 
 <h4>Security</h4>
